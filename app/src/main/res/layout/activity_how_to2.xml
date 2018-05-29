@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jasper.Hex.HowTo2">
+
+    <ImageButton
+        android:id="@+id/BackArrow"
+        style="@android:style/Widget.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/back_arrow"
+        android:cropToPadding="false"
+        android:onClick="howTo1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_back" />
+
+    <ImageButton
+        android:id="@+id/ForArrow"
+        style="@android:style/Widget.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/for_arrow"
+        android:cropToPadding="false"
+        android:onClick="howTo3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_for" />
+
+    <ImageView
+        android:id="@+id/outline1_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="39dp"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintBottom_toBottomOf="@+id/outline2_0"
+        app:layout_constraintEnd_toStartOf="@+id/outline1_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline1_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toStartOf="@+id/outline1_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline1_0"
+        app:layout_constraintTop_toTopOf="@+id/outline1_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline1_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/outline1_1"
+        app:layout_constraintTop_toTopOf="@+id/outline1_1"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline2_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="39dp"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintBottom_toBottomOf="@+id/outline3_0"
+        app:layout_constraintEnd_toStartOf="@+id/outline2_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline2_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toStartOf="@+id/outline2_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline2_0"
+        app:layout_constraintTop_toTopOf="@+id/outline2_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline2_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toStartOf="@+id/outline2_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline2_1"
+        app:layout_constraintTop_toTopOf="@+id/outline2_1"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline2_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline2_2"
+        app:layout_constraintTop_toTopOf="@+id/outline2_2"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline3_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintBottom_toTopOf="@+id/howTo2_2"
+        app:layout_constraintEnd_toStartOf="@+id/outline3_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/howTo2"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline3_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toStartOf="@+id/outline3_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline3_0"
+        app:layout_constraintTop_toTopOf="@+id/outline3_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline3_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toStartOf="@+id/outline3_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline3_1"
+        app:layout_constraintTop_toTopOf="@+id/outline3_1"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline3_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toStartOf="@+id/outline3_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline3_2"
+        app:layout_constraintTop_toTopOf="@+id/outline3_2"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline3_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline3_3"
+        app:layout_constraintTop_toTopOf="@+id/outline3_3"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline4_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toStartOf="@+id/outline4_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/outline3_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline4_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toStartOf="@+id/outline4_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline4_0"
+        app:layout_constraintTop_toTopOf="@+id/outline4_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline4_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toStartOf="@+id/outline4_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline4_1"
+        app:layout_constraintTop_toTopOf="@+id/outline4_1"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline4_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline4_2"
+        app:layout_constraintTop_toTopOf="@+id/outline4_2"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline5_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toStartOf="@+id/outline5_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hex3_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline5_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toStartOf="@+id/outline5_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline5_0"
+        app:layout_constraintTop_toTopOf="@+id/outline5_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline5_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/hex_outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/outline5_1"
+        app:layout_constraintTop_toTopOf="@+id/outline5_1"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/hex0_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintEnd_toStartOf="@+id/RTHex"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/LTHex"
+        app:layout_constraintTop_toTopOf="@+id/LTHex"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageView
+        android:id="@+id/hex1_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintEnd_toStartOf="@+id/hex1_1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/outline2_0"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageView
+        android:id="@+id/hex1_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintEnd_toStartOf="@+id/hex1_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/hex1_0"
+        app:layout_constraintTop_toTopOf="@+id/hex1_0"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageView
+        android:id="@+id/hex1_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintEnd_toStartOf="@+id/hex1_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/hex1_1"
+        app:layout_constraintTop_toTopOf="@+id/hex1_1"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageView
+        android:id="@+id/hex1_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hex1_2"
+        app:layout_constraintTop_toTopOf="@+id/hex1_2"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageView
+        android:id="@+id/hex2_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintEnd_toStartOf="@+id/CHex"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/LCHex"
+        app:layout_constraintTop_toTopOf="@+id/LCHex"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageView
+        android:id="@+id/hex2_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintEnd_toStartOf="@+id/RCHex"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/CHex"
+        app:layout_constraintTop_toTopOf="@+id/CHex"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageView
+        android:id="@+id/hex3_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintEnd_toStartOf="@+id/hex3_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/outline4_0"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageView
+        android:id="@+id/hex3_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintEnd_toStartOf="@+id/hex3_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/hex3_0"
+        app:layout_constraintTop_toTopOf="@+id/hex3_0"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageView
+        android:id="@+id/hex3_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintEnd_toStartOf="@+id/hex3_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/hex3_1"
+        app:layout_constraintTop_toTopOf="@+id/hex3_1"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageView
+        android:id="@+id/hex3_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/hex3_2"
+        app:layout_constraintTop_toTopOf="@+id/hex3_2"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageView
+        android:id="@+id/hex4_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintEnd_toStartOf="@+id/RBHex"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/LBHex"
+        app:layout_constraintTop_toTopOf="@+id/LBHex"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageButton
+        android:id="@+id/LCHex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        android:onClick="changeColorLC"
+        app:layout_constraintEnd_toStartOf="@+id/hex2_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/outline3_0"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageButton
+        android:id="@+id/CHex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        android:onClick="changeColorC"
+        app:layout_constraintEnd_toStartOf="@+id/hex2_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/hex2_1"
+        app:layout_constraintTop_toTopOf="@+id/hex2_1"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageButton
+        android:id="@+id/RCHex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        android:onClick="changeColorRC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/hex2_3"
+        app:layout_constraintTop_toTopOf="@+id/hex2_3"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageButton
+        android:id="@+id/LTHex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        android:onClick="changeColorLT"
+        app:layout_constraintEnd_toStartOf="@+id/hex0_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/outline1_0"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageButton
+        android:id="@+id/RTHex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        android:onClick="changeColorRT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/hex0_1"
+        app:layout_constraintTop_toTopOf="@+id/hex0_1"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageButton
+        android:id="@+id/LBHex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        android:onClick="changeColorLB"
+        app:layout_constraintEnd_toStartOf="@+id/hex4_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/outline5_0"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageButton
+        android:id="@+id/RBHex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        android:onClick="changeColorRB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/hex4_1"
+        app:layout_constraintTop_toTopOf="@+id/hex4_1"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageView
+        android:id="@+id/player0_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/player_hex"
+        android:src="@drawable/hex_player"
+        app:layout_constraintStart_toStartOf="@+id/LTHex"
+        app:layout_constraintTop_toTopOf="@+id/LTHex" />
+
+    <ImageView
+        android:id="@+id/player0_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/player_hex"
+        android:src="@drawable/hex_player"
+        app:layout_constraintStart_toStartOf="@+id/RTHex"
+        app:layout_constraintTop_toTopOf="@+id/RTHex" />
+
+    <ImageView
+        android:id="@+id/player2_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/player_hex"
+        android:src="@drawable/hex_player"
+        app:layout_constraintStart_toStartOf="@+id/LCHex"
+        app:layout_constraintTop_toTopOf="@+id/LCHex" />
+
+    <ImageView
+        android:id="@+id/player2_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/player_hex"
+        android:src="@drawable/hex_player"
+        app:layout_constraintStart_toStartOf="@+id/CHex"
+        app:layout_constraintTop_toTopOf="@+id/CHex" />
+
+    <ImageView
+        android:id="@+id/player2_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/player_hex"
+        android:src="@drawable/hex_player"
+        app:layout_constraintStart_toStartOf="@+id/RCHex"
+        app:layout_constraintTop_toTopOf="@+id/RCHex" />
+
+    <ImageView
+        android:id="@+id/player4_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/player_hex"
+        android:src="@drawable/hex_player"
+        app:layout_constraintStart_toStartOf="@+id/LBHex"
+        app:layout_constraintTop_toTopOf="@+id/LBHex" />
+
+    <ImageView
+        android:id="@+id/player4_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/player_hex"
+        android:src="@drawable/hex_player"
+        app:layout_constraintStart_toStartOf="@+id/RBHex"
+        app:layout_constraintTop_toTopOf="@+id/RBHex" />
+
+    <TextView
+        android:id="@+id/howTo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/HowTo2"
+        android:text="@string/HowTo2"
+        android:textAlignment="center"
+        android:textColor="@color/Purple"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/outline3_0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/howTo2_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/HowTo2_2"
+        android:text="@string/HowTo2_2"
+        android:textAlignment="center"
+        android:textColor="@color/Purple"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outline3_0" />
+
+    <ImageView
+        android:id="@+id/wheel"
+        android:layout_width="wrap_content"
+        android:layout_height="342dp"
+        android:contentDescription="@string/color_wheel"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/color_wheel" />
+
+    <Button
+        android:id="@+id/outWheel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/out_wheel"
+        android:onClick="backWheel"
+        android:text="@string/out_wheel"
+        android:textColor="@color/Purple"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/miniWheel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_wheel"
+        android:maxHeight="50dp"
+        android:maxWidth="50dp"
+        android:onClick="colorWheel"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/color_wheel"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+</android.support.constraint.ConstraintLayout>

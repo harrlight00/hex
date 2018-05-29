@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Hex</string>
+    <string name="game_title">Hex</string>
+    <string name="back_arrow">←</string>
+    <string name="for_arrow">for_arrow</string>
+    <string name="hex_outline">hex_outline</string>
+    <string name="color_hex">color_hex</string>
+    <string name="hex_suggest">hex_suggest</string>
+    <string name="player_hex">player_hex</string>
+    <string name="victory">Good job!</string>
+    <string name="reset">Reset</string>
+    <string name="how_to">How To Play</string>
+    <string name="skip_level">Skip Level</string>
+    <string name="next_level">Next Level</string>
+    <string name="HowTo1">The goal of this game is to mix primary colors to make secondary colors.  Try tapping the hexes to cycle through the colors, then move on by hitting the arrow!</string>
+    <string name="HowTo1_2">You can change the hexes marked</string>
+    <string name="HowTo2">Now try with the hexes arranged together, then move on when you are ready!</string>
+    <string name="HowTo3">Now try fitting this color template by changing the hexes!  Some hexes may need to remain white.</string>
+    <string name="HowToWin">Good Job!  Now try heading into the play section.</string>
+    <string name="count">#1</string>
+    <string name="play_button">Play</string>
+    <string name="color_wheel">Color Wheel</string>
+    <string name="out_wheel">Back</string>
+    <string name="HowTo2_2">If you need a reference for your colors, check the color wheel (tap to enlarge it)</string>
+</resources>

@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jasper.Hex.Level">
+
+    <ImageButton
+        android:id="@+id/BackArrow"
+        style="@android:style/Widget.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/back_arrow"
+        android:cropToPadding="false"
+        android:onClick="backTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_back" />
+
+    <ImageButton
+        android:id="@+id/ForArrow"
+        style="@android:style/Widget.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/back_arrow"
+        android:cropToPadding="false"
+        android:onClick="nextLevel"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_for" />
+
+    <ImageView
+        android:id="@+id/outline0_0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="30dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/outline1_0"
+        app:layout_constraintEnd_toStartOf="@+id/outline0_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline0_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline0_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline0_0"
+        app:layout_constraintTop_toTopOf="@+id/outline0_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline0_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline0_1"
+        app:layout_constraintTop_toTopOf="@+id/outline0_1"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline1_0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="30dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/outline2_0"
+        app:layout_constraintEnd_toStartOf="@+id/outline1_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline1_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline1_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline1_0"
+        app:layout_constraintTop_toTopOf="@+id/outline1_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline1_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline1_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline1_1"
+        app:layout_constraintTop_toTopOf="@+id/outline1_1"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline1_3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline1_2"
+        app:layout_constraintTop_toTopOf="@+id/outline1_2"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline2_0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="30dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/outline3_0"
+        app:layout_constraintEnd_toStartOf="@+id/outline2_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline2_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline2_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline2_0"
+        app:layout_constraintTop_toTopOf="@+id/outline2_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline2_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline2_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline2_1"
+        app:layout_constraintTop_toTopOf="@+id/outline2_1"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline2_3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline2_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline2_2"
+        app:layout_constraintTop_toTopOf="@+id/outline2_2"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline2_4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline2_3"
+        app:layout_constraintTop_toTopOf="@+id/outline2_3"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline3_0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="30dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/outline4_0"
+        app:layout_constraintEnd_toStartOf="@+id/outline3_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline3_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline3_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline3_0"
+        app:layout_constraintTop_toTopOf="@+id/outline3_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline3_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline3_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline3_1"
+        app:layout_constraintTop_toTopOf="@+id/outline3_1"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline3_3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline3_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline3_2"
+        app:layout_constraintTop_toTopOf="@+id/outline3_2"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline3_4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline3_5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline3_3"
+        app:layout_constraintTop_toTopOf="@+id/outline3_3"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline3_5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline3_4"
+        app:layout_constraintTop_toTopOf="@+id/outline3_4"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline4_0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/reset"
+        app:layout_constraintEnd_toStartOf="@+id/outline4_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/count"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline4_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline4_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline4_0"
+        app:layout_constraintTop_toTopOf="@+id/outline4_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline4_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline4_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline4_1"
+        app:layout_constraintTop_toTopOf="@+id/outline4_1"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline4_3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline4_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline4_2"
+        app:layout_constraintTop_toTopOf="@+id/outline4_2"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline4_4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline4_5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline4_3"
+        app:layout_constraintTop_toTopOf="@+id/outline4_3"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline4_5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline4_6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline4_4"
+        app:layout_constraintTop_toTopOf="@+id/outline4_4"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline4_6"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline4_5"
+        app:layout_constraintTop_toTopOf="@+id/outline4_5"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline5_0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline5_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/outline4_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline5_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline5_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline5_0"
+        app:layout_constraintTop_toTopOf="@+id/outline5_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline5_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline5_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline5_1"
+        app:layout_constraintTop_toTopOf="@+id/outline5_1"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline5_3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline5_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline5_2"
+        app:layout_constraintTop_toTopOf="@+id/outline5_2"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline5_4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline5_5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline5_3"
+        app:layout_constraintTop_toTopOf="@+id/outline5_3"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline5_5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline5_4"
+        app:layout_constraintTop_toTopOf="@+id/outline5_4"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline6_0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline6_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/outline5_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline6_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline6_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline6_0"
+        app:layout_constraintTop_toTopOf="@+id/outline6_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline6_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline6_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline6_1"
+        app:layout_constraintTop_toTopOf="@+id/outline6_1"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline6_3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline6_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline6_2"
+        app:layout_constraintTop_toTopOf="@+id/outline6_2"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline6_4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline6_3"
+        app:layout_constraintTop_toTopOf="@+id/outline6_3"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline7_0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline7_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/outline6_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline7_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline7_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline7_0"
+        app:layout_constraintTop_toTopOf="@+id/outline7_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline8_0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline8_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/outline7_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline8_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline8_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline8_0"
+        app:layout_constraintTop_toTopOf="@+id/outline8_0"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline8_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline8_1"
+        app:layout_constraintTop_toTopOf="@+id/outline8_1"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline7_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/outline7_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline7_1"
+        app:layout_constraintTop_toTopOf="@+id/outline7_1"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageView
+        android:id="@+id/outline7_3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/hex_outline"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outline7_2"
+        app:layout_constraintTop_toTopOf="@+id/outline7_2"
+        app:srcCompat="@drawable/hex_outline" />
+
+    <ImageButton
+        android:id="@+id/player0_0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toStartOf="@+id/outline0_0"
+        app:layout_constraintTop_toTopOf="@+id/outline0_0"
+        app:srcCompat="@drawable/hex_player" />
+
+    <ImageView
+        android:id="@+id/hex0_1"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toEndOf="@+id/player0_0"
+        app:layout_constraintTop_toTopOf="@+id/outline0_1"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageButton
+        android:id="@+id/player0_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toStartOf="@+id/outline0_2"
+        app:layout_constraintTop_toTopOf="@+id/outline0_2"
+        app:srcCompat="@drawable/hex_player" />
+
+    <ImageView
+        android:id="@+id/hex1_0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toStartOf="@+id/outline1_0"
+        app:layout_constraintTop_toTopOf="@+id/outline1_0"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageView
+        android:id="@+id/hex1_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toEndOf="@+id/hex1_0"
+        app:layout_constraintTop_toTopOf="@+id/outline1_1"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageView
+        android:id="@+id/hex1_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toEndOf="@+id/hex1_1"
+        app:layout_constraintTop_toTopOf="@+id/outline1_2"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageView
+        android:id="@+id/hex1_3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toEndOf="@+id/hex1_2"
+        app:layout_constraintTop_toTopOf="@+id/outline1_3"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageButton
+        android:id="@+id/player2_0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toStartOf="@+id/outline2_0"
+        app:layout_constraintTop_toTopOf="@+id/outline2_0"
+        app:srcCompat="@drawable/hex_player" />
+
+    <ImageView
+        android:id="@+id/hex2_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toEndOf="@+id/player2_0"
+        app:layout_constraintTop_toTopOf="@+id/outline2_1"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageButton
+        android:id="@+id/player2_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toStartOf="@+id/outline2_2"
+        app:layout_constraintTop_toTopOf="@+id/outline2_2"
+        app:srcCompat="@drawable/hex_player" />
+
+    <ImageView
+        android:id="@+id/hex2_3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toEndOf="@+id/player2_2"
+        app:layout_constraintTop_toTopOf="@+id/outline2_3"
+        app:srcCompat="@drawable/hex_fill" />
+
+    <ImageButton
+        android:id="@+id/player2_4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toStartOf="@+id/outline2_4"
+        app:layout_constraintTop_toTopOf="@+id/outline2_4"
+        app:srcCompat="@drawable/hex_player" />
+
+    <ImageButton
+        android:id="@+id/player4_0"
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toStartOf="@+id/outline4_0"
+        app:layout_constraintTop_toTopOf="@+id/outline4_0"
+        app:srcCompat="@drawable/hex_player" />
+
+    <ImageButton
+        android:id="@+id/player4_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toStartOf="@+id/outline4_2"
+        app:layout_constraintTop_toTopOf="@+id/outline4_2"
+        app:srcCompat="@drawable/hex_player" />
+
+    <ImageButton
+        android:id="@+id/player4_4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toStartOf="@+id/outline4_4"
+        app:layout_constraintTop_toTopOf="@+id/outline4_4"
+        app:srcCompat="@drawable/hex_player" />
+
+    <ImageButton
+        android:id="@+id/player4_6"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toStartOf="@+id/outline4_6"
+        app:layout_constraintTop_toTopOf="@+id/outline4_6"
+        app:srcCompat="@drawable/hex_player" />
+
+    <ImageButton
+        android:id="@+id/player6_0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toStartOf="@+id/outline6_0"
+        app:layout_constraintTop_toTopOf="@+id/outline6_0"
+        app:srcCompat="@drawable/hex_player" />
+
+    <ImageButton
+        android:id="@+id/player6_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toStartOf="@+id/outline6_2"
+        app:layout_constraintTop_toTopOf="@+id/outline6_2"
+        app:srcCompat="@drawable/hex_player" />
+
+    <ImageButton
+        android:id="@+id/player6_4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toStartOf="@+id/outline6_4"
+        app:layout_constraintTop_toTopOf="@+id/outline6_4"
+        app:srcCompat="@drawable/hex_player" />
+
+    <ImageButton
+        android:id="@+id/player7_0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toStartOf="@+id/outline8_0"
+        app:layout_constraintTop_toTopOf="@+id/outline8_0"
+        app:srcCompat="@drawable/hex_player" />
+
+    <ImageButton
+        android:id="@+id/player7_2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_hex"
+        app:layout_constraintStart_toStartOf="@+id/outline8_2"
+        app:layout_constraintTop_toTopOf="@+id/outline8_2"
+        app:srcCompat="@drawable/hex_player" />
+
+    <TextView
+        android:id="@+id/victory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/victory"
+        android:text="@string/victory"
+        android:textColor="@color/Purple"
+        android:textSize="36sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/count" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/reset"
+        android:onClick="reset"
+        android:text="@string/reset"
+        android:textColor="@color/Purple"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/skip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/skip"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/skip_level"
+        android:onClick="skip"
+        android:text="@string/skip_level"
+        android:textColor="@color/Purple"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/reset"
+        app:layout_constraintTop_toTopOf="@+id/reset" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:contentDescription="@string/count"
+        android:text="@string/count"
+        android:textColor="@color/Purple"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/ForArrow"
+        app:layout_constraintStart_toEndOf="@+id/BackArrow"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/next_level"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/next_level"
+        android:onClick="nextLevel"
+        android:text="@string/next_level"
+        android:textColor="@color/Purple"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/outWheel" />
+
+    <Button
+        android:id="@+id/outWheel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/out_wheel"
+        android:onClick="backWheel"
+        android:text="@string/out_wheel"
+        android:textColor="@color/Purple"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/reset" />
+
+    <ImageView
+        android:id="@+id/wheel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/color_wheel"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/count"
+        app:srcCompat="@drawable/color_wheel" />
+
+    <ImageButton
+        android:id="@+id/miniWheel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/color_wheel"
+        android:maxHeight="50dp"
+        android:maxWidth="50dp"
+        android:onClick="colorWheel"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ForArrow"
+        app:srcCompat="@drawable/color_wheel" />
+
+</android.support.constraint.ConstraintLayout>
